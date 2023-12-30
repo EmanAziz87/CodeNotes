@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-//@route          GET api/users
+//@route          GET api/post
 //@description    test route
 //@access         public (Token Required)
-router.get("/", (req, res) => {
+
+router.post("/", (req, res) => {
+  console.log(req.body);
   res.send("Users route");
 });
 
