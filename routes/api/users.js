@@ -30,7 +30,7 @@ router.post(
     const { name, email, password } = req.body;
 
     try {
-      let user = await User.findOne({ email });
+      let user = await User.findOne({ where: { email } });
 
       //if user already exists, send a status 200 code and json error message
       //of the same format as our express-validator input error format above
